@@ -16,8 +16,8 @@ void setup() {
 
 void loop() {
 
-  if (v7rc.startBLE()){
-    Serial.println(v7rc.readData());
+  if (v7rc.connect()){
+    Serial.println(v7rc.readdata());
     if (v7rc.setMode("SRT")){
       Serial.println("-------------------------------------------------------------------------");
       Serial.print("DATA 1：");
@@ -37,8 +37,9 @@ void loop() {
 }
 
 /*方法使用
-v7rc.startBLE() 確認藍芽是否有連線 // 回傳值:boolean
-v7rc.readData()讀取資料 // 回傳值:String
+v7rc.setupBLE("V7RC_BLE") //設定BLE名稱
+v7rc.connect()//判斷是否連線成功
+v7rc.readdata()讀取資料 // 回傳值:String
 v7rc.setMode("SRT") 模式是否為SRT // 回傳值:boolean
 v7rc.readSRTdata(1) 讀取SRT資料(1~4) // 回傳值:int
 */
