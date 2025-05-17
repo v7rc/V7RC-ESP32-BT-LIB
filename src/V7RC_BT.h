@@ -1,3 +1,4 @@
+// V7RC BLE 藍芽控制 鴻兔科技 (u2025.05.16)
 #ifndef V7RC_BT_h
 #define V7RC_BT_h
 
@@ -12,15 +13,13 @@ class V7RC_BT {
 
 private :
 
-
-
 public :
 
 void setUUID(String uuid);
 void setupBLE(String BLEName);
-
-bool startBLE();
-String readData();
+void loopBLE();
+bool connect();
+String readdata();
 bool setMode(String mod);
 int readSRTdata(int sc);
 

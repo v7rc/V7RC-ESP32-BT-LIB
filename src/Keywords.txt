@@ -13,8 +13,9 @@ V7RC_BT	KEYWORD1
 #######################################
 setUUID	KEYWORD2
 setupBLE	KEYWORD2
-startBLE	KEYWORD2
-readData	KEYWORD2
+loopBLE	KEYWORD2
+connect	KEYWORD2
+readdata 	KEYWORD2
 setMode	KEYWORD2
 readSRTdata	KEYWORD2
 #######################################
